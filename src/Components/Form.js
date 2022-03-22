@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from 'react';
 
-/*import { Icon } from '@iconify/react';*/
 import axios from 'axios';
 
+function Form(){
+    
+        const [userName, setuserName] = useState('');
 
-function Form() {
-
-  const [movies, setMovies] = useState([])
-    async function apiAdvice() {
+    async function handleSubmit() {
         
-        await axios.get('http://www.omdbapi.com/?s=Superman&type=series&apikey=3fb68cfd')
+        await axios.get('http://www.omdbapi.com/?s=${userName}&apikey=3fb68cfd')
         .then((response) => {
             let resp = response.data.Search
             console.log(resp)
-            setMovies(resp)
+            
 
         })
         .catch((error) => {
@@ -22,18 +21,22 @@ function Form() {
         })
     };
     
-    useEffect(() => {apiAdvice()}, []);
-    return (
-      <>
-        {movies.map((movie, i) => (
-          <div>
-            <div>{movie.Title}</div>
-            <img src={movie.Poster} alt='Poster' />
-          </div>
-        )
-        )}
-      </>
-    );
-  }
-  
-  export default Form;
+    useEffect(() => {handleSubmit()}, []);
+    
+    return(
+        <div className='form-field'>
+            <h6>Search</h6>
+            <div className='form'>
+                <form onSubmit={handleSubmit}>
+                    <input type="text" 
+                    placeholder=' ' 
+                    value={ userName } 
+                    onChange={ event => setuserName(event.target.value ) }
+                    required />
+                </form>
+            </div>
+        </div>
+    )
+}
+
+export default Form;

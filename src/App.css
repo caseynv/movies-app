@@ -1,5 +1,117 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
+
+.header{
+  background: #292929;
+  width: 100%;
+  height: 140px;
 }
 
+button{
+  height: 60px;
+  width: 193px;
+  border-radius: 0px;
+  border: 1px solid #FFF;
+  background: #292929;
+  margin: 40px 0px 40px 77px;
+}
 
+button p{
+  color: #FFF;
+  height: 33px;
+  width: 157px;
+  border-radius: 0px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+}
+
+.body{
+  height: 550px;
+  width: 100%;
+  background: url('./Images/background.png') repeat 0 0;
+
+}
+p{
+  margin: 0;
+}
+
+.note p{
+  width: 50%;
+  height: 282px;
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700, bold;
+  font-size: 72px;
+  line-height: 94px;
+  letter-spacing: -0.05em;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+
+.note{
+  padding: 109px 0px 109px 77px;
+}
+
+.form-field{
+  margin: 36px 0px 36px 47px;
+}
+
+.form-field h6{
+  font-family: 'DM Sans';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 31px;
+  letter-spacing: 0em;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-self: center;
+}
+
+.form input{
+  width: 90%;
+  height: 54px;
+}
+
+.movieslist{
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  padding-left: 50px;
+}
+
+.movieslist h6{
+  font-family: 'DM Sans';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 31px;
+  letter-spacing: 0em;
+}
+
+.movie-sect{
+  font-family: DM Sans;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 31px;
+  letter-spacing: 0em;
+  height: 300px;
+  background-color: #292929;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  flex: 0 0 300px;
+  margin: 18px 13px 13px 13px;
+  border-radius: 12px;
+}
