@@ -2,7 +2,7 @@
 
 .header{
   background: #292929;
-  width: 100%;
+  width: 100vw;
   height: 140px;
 }
 
@@ -28,7 +28,7 @@ button p{
 
 .body{
   height: 550px;
-  width: 100%;
+  width: 100vw;
   background: url('./Images/background.png') repeat 0 0;
 
 }
@@ -84,8 +84,9 @@ p{
 .movieslist{
   display: flex;
   flex-direction: row;
-  overflow: scroll;
   padding-left: 50px;
+  width: fit-content;
+  overflow: visible;
 }
 
 .movieslist h6{
